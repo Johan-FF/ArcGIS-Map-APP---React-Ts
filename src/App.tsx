@@ -1,14 +1,14 @@
 import { FC, ReactNode } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Map from "./pages/Map";
+import MapPage from "./pages/Map";
 import HomePage from "./pages/Home";
 import ErrorNotFoundPage from "./pages/ErrorNotFound";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/map" element={<Map />} />
+      <Route path="/map" element={<MapPage />} />
       <Route path="*" element={<ErrorNotFoundPage />} />
     </Routes>
   );
