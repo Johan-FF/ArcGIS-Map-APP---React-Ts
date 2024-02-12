@@ -1,4 +1,3 @@
-@import "@esri/calcite-components/dist/calcite/calcite.css";
 @import "https://js.arcgis.com/4.28/@arcgis/core/assets/esri/themes/light/main.css";
 
 @tailwind base;

@@ -1,8 +1,11 @@
 import { FC, useEffect } from "react";
 import { ARC_GIS_API_KEY } from "../environments";
 
+import Layout from "../components/Layout";
+
 import Map from "@arcgis/core/Map";
 import ViewMap from "@arcgis/core/views/MapView";
+import BasemapGallery from "@arcgis/core/widgets/BasemapGallery.js";
 import esriConfig from "@arcgis/core/config";
 
 const MapPage: FC = () => {
@@ -24,6 +27,16 @@ const MapPage: FC = () => {
       view.map.basemap = basemapId;
     };
 
+    if (window.innerWidth >= 1024) {
+      let basemapGallery = new BasemapGallery({
+        view: view,
+      });
+
+      view.ui.add(basemapGallery, {
+        position: "bottom-right",
+      });
+    }
+
     const basemapStylesDiv = document.getElementById("basemapStyles");
     if (basemapStylesDiv) view.ui.add(basemapStylesDiv, "top-right");
 
@@ -37,7 +50,7 @@ const MapPage: FC = () => {
   }, []);
 
   return (
-    <main className="w-screen h-screen flex justify-center items-center ">
+    <Layout>
       <div className="w-4/5 h-4/5" id="viewMap"></div>
       <div id="basemapStyles">
         <calcite-label>Basemap style</calcite-label>
@@ -165,7 +178,7 @@ const MapPage: FC = () => {
           ></calcite-combobox-item>
         </calcite-combobox>
       </div>
-    </main>
+    </Layout>
   );
 };
 
