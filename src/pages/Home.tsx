@@ -34,9 +34,9 @@ const HomePage: FC = () => {
 
   return (
     <Found>
-      <Card sx={{ width: 550 }}>
+      <Card sx={{ width: window.innerWidth <= 425 ? 250 : 550 }}>
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ height: window.innerWidth <= 425 ? 70 : 140 }}
           image="/logo_esri_colombia.png"
           title="Logo ArcGIS"
         />

@@ -5,7 +5,7 @@ import MapPage from "./pages/Map";
 import HomePage from "./pages/Home";
 import ErrorNotFoundPage from "./pages/ErrorNotFound";
 
-const AppRoutes = () => {
+const AppRoutes: FC = () => {
   return (
     <Routes>
       <Route path="/map" element={<MapPage />} />
