@@ -1,5 +1,7 @@
 # ArcGIS Map APP
 
+![arcgis_map_app_video](https://github.com/Johan-FF/ArcGIS-Map-APP---React-Ts/assets/94552691/97206849-db80-4d64-8ae5-777c2079dc59)
+
 ## Description
 
 This is a project that uses the @arcgis/core library to visualize the world map, so it is possible to switch between different views. This project implements Material UI and Tailwind CSS, this design is responsive.
